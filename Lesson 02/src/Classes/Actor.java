@@ -2,64 +2,40 @@ package Classes;
 
 import Interfaces.iActorBehaviour;
 
+/**
+ * Абстрактный класс, представляющий покупателя.
+ * Реализует интерфейс iActorBehaviour.
+ */
 public abstract class Actor implements iActorBehaviour {
+    /**
+     * Имя покупателя.
+     */
     protected String name;
+
+    /**
+     * Флаги, указывающие, делает ли покупатель заказ.
+     */
     protected boolean isTakeOrder;
     protected boolean isMakeOrder;
 
+    /**
+     * Конструктор для создания покупателя.
+     * @param name Имя покупателя.
+     */
     public Actor(String name) {
         this.name = name;
     }
 
+    /**
+     * Абстрактный метод для получения имени покупателя.
+     * @return Имя покупателя.
+     */
     public abstract String getName();
+
+    /**
+     * Абстрактный метод для установки имени покупателя.
+     * @param name Новое имя покупателя.
+     */
     public abstract void setName(String name);
 }
 
-
-// package Interfeices;
-
-// public interface iActorBehaviour {
-    
-// }
-
-
-// package Interfeices;
-
-// public interface iQueueBehaviour {
-//     public void takeInQueue() {
-
-//     }
-
-//     public void velcaseFromQueue() {
-
-//     }
-
-//     public void tekeQueue () {
-
-//     }
-
-//     public void geActor () {
-        
-//     }
-// }
-
-
-// package Interfeices;
-
-// import java.awt.List;
-
-// import Classes.Actor;
-
-// public interface isMarketBehaviour {
-//     public void acceptToMarket(Actor actor) {
-        
-//     }
-
-//     public void releseFromMarket(List<Actor> actors) {
-        
-//     }
-
-//     public void upDate() {
-        
-//     }
-// }
