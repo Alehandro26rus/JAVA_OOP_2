@@ -39,7 +39,7 @@ public class App {
         productList.add(item_5);
         productList.add(item_6);
         productList.add(item_7);
-        
+
         //Добавляем вывод новых продуктов
         productList.add(item_8);
         productList.add(item_9);

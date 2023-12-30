@@ -18,15 +18,15 @@ public class VendingMachine {
     }
     //Методы
 
-    public Holder getHold() {
-        return hold;
-    }
 
     public void buyProduct(){
 
     }
     public void releaseProduct(){
 
+    }
+    public Holder getHold() {
+        return hold;
     }
 
     public void setHold(Holder hold) {
