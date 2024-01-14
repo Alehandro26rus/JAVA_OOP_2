@@ -3,6 +3,10 @@ package domain;
 import java.util.Iterator;
 import java.util.List;
 
+/**
+ * Класс, переопределяющий итерацию объектов группы студентов
+ */
+
 public class StudentIterator implements Iterator<Student> {
     private int count;
     private List<Student> list;
