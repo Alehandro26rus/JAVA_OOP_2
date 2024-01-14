@@ -2,6 +2,11 @@ package domain;
 
 import domain.GroupeIterator;
 import domain.StudentGroup;
+/**
+ * Класс который создаёт поток из групп студентов
+ * private int steamId - идентификатор потока
+ * private List<StudentGroup> listGroup - список групп студентов
+ */
 
 import java.util.*;
 

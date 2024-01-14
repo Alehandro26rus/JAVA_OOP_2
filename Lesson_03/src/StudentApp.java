@@ -90,6 +90,5 @@ public class StudentApp {
         System.out.println();
         System.out.println(studentSteam_01.toString());
         System.out.println(studentSteam_02.toString());
-        // Сортируем группы в потоке по количеству студентов
     }
 }
