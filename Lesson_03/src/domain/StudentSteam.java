@@ -3,9 +3,7 @@ package domain;
 import domain.GroupeIterator;
 import domain.StudentGroup;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
+import java.util.*;
 
 public class StudentSteam implements Iterable<StudentGroup> {
     private int steamId;
@@ -38,6 +36,22 @@ public class StudentSteam implements Iterable<StudentGroup> {
     public void setListGroup(List<StudentGroup> listGroup) {
         this.listGroup = listGroup;
     }
+    // Добавляем метод для сортировки групп в потоке по количеству студентов
+    public void sortGroupsByNumberOfStudents() {
+        Collections.sort(listGroup, new Comparator<StudentGroup>() {
+            @Override
+            public int compare(StudentGroup group1, StudentGroup group2) {
+                // Сначала сравниваем по количеству студентов
+                int compareByStudents = Integer.compare(group1.getList().size(), group2.getList().size());
+                if (compareByStudents != 0) {
+                    return compareByStudents;
+                }
+
+                // Если количество студентов одинаково, сравниваем по идентификатору группы
+                return Integer.compare(group1.getId(), group2.getId());
+            }
+        });
+    }
 
     @Override
     public Iterator<StudentGroup> iterator() {
@@ -54,4 +68,5 @@ public class StudentSteam implements Iterable<StudentGroup> {
         }
         return result.toString();
     }
+
 }

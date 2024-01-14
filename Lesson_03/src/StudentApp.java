@@ -19,8 +19,8 @@ public class StudentApp {
         Student student_02 = new Student("Даня", 28);
         Student student_03 = new Student("Даша", 18);
         Student student_04 = new Student("Маша", 22);
-        //Student student_05 = new Student("Анна", 18);
-        //Student student_06 = new Student("Рома", 22);
+        Student student_05 = new Student("Анна", 18);
+        Student student_06 = new Student("Рома", 22);
 
         Student student_07 = new Student("Никита", 24);
         Student student_08 = new Student("Дима", 28);
@@ -34,7 +34,7 @@ public class StudentApp {
         Student student_15 = new Student("Наталья", 19);
         Student student_16 = new Student("Михаил", 18);
         Student student_17 = new Student("Даниил", 18);
-        //Student student_18 = new Student("Глеб", 23);
+        Student student_18 = new Student("Глеб", 23);
 
         //Создадим новый список студентов
         List<Student> list_01 = new ArrayList<>();
@@ -45,22 +45,22 @@ public class StudentApp {
         list_01.add(student_02);
         list_01.add(student_03);
         list_01.add(student_04);
-        //list_01.add(student_05);
-        //list_01.add(student_06);
+        list_01.add(student_05);
+        list_01.add(student_06);
 
         list_02.add(student_07);
         list_02.add(student_08);
         list_02.add(student_09);
         list_02.add(student_10);
         list_02.add(student_11);
-        list_02.add(student_12);
+        //list_02.add(student_12); // убираем элемент для проверки сортировки по числу студентов в группе
 
         list_03.add(student_13);
         list_03.add(student_14);
         list_03.add(student_15);
         list_03.add(student_16);
         list_03.add(student_17);
-        //list_03.add(student_18);
+        list_03.add(student_18);
 
         // Создаём группу студентов, в которую передаём список студентов и идентификатор группы
         StudentGroup group_1 = new StudentGroup(list_01, 1);
@@ -80,8 +80,10 @@ public class StudentApp {
         studentSteam_01.addStudentGroup(group_1);
         studentSteam_01.addStudentGroup(group_2);
         studentSteam_02.addStudentGroup(group_3);
-        Collections.sort(studentSteam_01.getListGroup());
-        Collections.sort(studentSteam_02.getListGroup());
+
+        // Вызываем метод для сортировки групп в потоке по количеству студентов
+        studentSteam_01.sortGroupsByNumberOfStudents();
+        studentSteam_02.sortGroupsByNumberOfStudents();
 
         // Выводим информацию о потоке студентов
         // Переход на новую строку консоли
@@ -89,7 +91,5 @@ public class StudentApp {
         System.out.println(studentSteam_01.toString());
         System.out.println(studentSteam_02.toString());
         // Сортируем группы в потоке по количеству студентов
-
-
     }
 }
