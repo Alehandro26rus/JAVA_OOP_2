@@ -38,8 +38,6 @@ public class StudentApp {
 
         //Создадим новый список студентов
         List<Student> list_01 = new ArrayList<>();
-        List<Student> list_02 = new ArrayList<>();
-        List<Student> list_03 = new ArrayList<>();
 
         list_01.add(student_01);
         list_01.add(student_02);
@@ -48,12 +46,16 @@ public class StudentApp {
         list_01.add(student_05);
         list_01.add(student_06);
 
+        List<Student> list_02 = new ArrayList<>();
+
         list_02.add(student_07);
         list_02.add(student_08);
         list_02.add(student_09);
         list_02.add(student_10);
         list_02.add(student_11);
         //list_02.add(student_12); // убираем элемент для проверки сортировки по числу студентов в группе
+
+        List<Student> list_03 = new ArrayList<>();
 
         list_03.add(student_13);
         list_03.add(student_14);
