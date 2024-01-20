@@ -1,7 +1,5 @@
-import domain.GroupeIterator;
-import domain.Student;
-import domain.StudentGroup;
-import domain.StudentSteam;
+import controllers.AccountController;
+import domain.*;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -92,5 +90,12 @@ public class StudentApp {
         System.out.println();
         System.out.println(studentSteam_01.toString());
         System.out.println(studentSteam_02.toString());
+
+        Teacher t1 = new Teacher("Эдуард", 50, "Доцент");
+        Employer e1 = new Employer("Фёдор", 35, "Дворник");
+
+        AccountController controller = new AccountController();
+        controller.paySalary(t1, 50000);
+        controller.paySalary(e1, 25000); 
     }
 }

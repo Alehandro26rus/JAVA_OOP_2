@@ -7,7 +7,7 @@ package domain;
  *
  */
 
-public class Teacher extends Person {
+public class Teacher extends Worker {
     private String academicDegree;
 
     // Конструктор класса Teacher
