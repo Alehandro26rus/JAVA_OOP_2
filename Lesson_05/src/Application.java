@@ -44,7 +44,8 @@ public class Application {
         iGetView view = new ViewClass();
 
         ControllerClass controller = new ControllerClass(model, view);
-        controller.update("Run");
+        //controller.update("Run");
+        controller.run();
 
     }
 }

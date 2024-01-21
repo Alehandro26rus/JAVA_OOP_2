@@ -3,8 +3,6 @@ package Controller;
 import Controller.Interfaces.iGetModel;
 import Controller.Interfaces.iGetView;
 import Model.Domain.Student;
-import Model.ModelClass;
-import View.ViewClass;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -37,5 +35,23 @@ public class ControllerClass {
 
         //MVC
         //view.printAllStudents(model.getStudents());
+    }
+    public void run(){
+        Command com = (Command) Command.NONE;
+        boolean getNewIter = true;
+        while (getNewIter){
+            String command = view.prompt("Введите команду: ");
+            com = Command.valueOf(command.toUpperCase());
+            switch (com){
+                case EXIT:
+                    getNewIter = false;
+                    System.out.println("Выход из программы");
+                    break;
+                case LIST:
+                    view.printAllStudents(model.getStudents());
+                    break;
+
+            }
+        }
     }
 }
