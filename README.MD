@@ -37,3 +37,9 @@
 - вызов удаления у модели(метод добавить в интерфейс iGetModel)
 - если такого нромера нет, то сообщить об этом
   Весь код прокомментировать и добавить само-документацию. Формат сдачи: ссылка на гитхаб проект
+## 6. Урок 6. ООП Дизайн и Solid
+1) Переписать код в соответствии с Single Responsibility Principle.
+2) Переписать код SpeedCalculation в соответствии с Open-Closed Principle
+3) Переписать код в соответствии с Interface Segregation Principle
+4) Переписать код в соответствии с Liskov Substitution Principle
+5) Переписать код в соответствии с Dependency Inversion Principle
