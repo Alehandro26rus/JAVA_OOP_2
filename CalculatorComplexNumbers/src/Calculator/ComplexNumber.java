@@ -1,5 +1,6 @@
-// ComplexNumber.java
 package Calculator;
+
+import java.util.Objects;
 
 /**
  * Класс ComplexNumber представляет комплексное число и
@@ -20,17 +21,23 @@ public class ComplexNumber {
         this.imaginary = imaginary;
     }
 
-    // Геттеры, сеттеры и другие методы
-
+    /**
+     * Получить реальную часть комплексного числа.
+     *
+     * @return Реальная часть.
+     */
     public double getReal() {
         return real;
     }
 
+    /**
+     * Получить мнимую часть комплексного числа.
+     *
+     * @return Мнимая часть.
+     */
     public double getImaginary() {
         return imaginary;
     }
-
-    // Другие методы, если необходимо
 
     /**
      * Переопределение метода toString для корректного отображения значения комплексного числа.
@@ -39,6 +46,31 @@ public class ComplexNumber {
      */
     @Override
     public String toString() {
-        return real + " + " + imaginary + "i";
+        return real + (imaginary < 0 ? " - " : " + ") + Math.abs(imaginary) + "i";
+    }
+
+    /**
+     * Переопределение метода equals для сравнения комплексных чисел.
+     *
+     * @param o Объект для сравнения.
+     * @return true, если объекты равны, иначе false.
+     */
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        ComplexNumber that = (ComplexNumber) o;
+        return Double.compare(that.real, real) == 0 &&
+                Double.compare(that.imaginary, imaginary) == 0;
+    }
+
+    /**
+     * Переопределение метода hashCode для вычисления хэш-кода комплексного числа.
+     *
+     * @return Хэш-код комплексного числа.
+     */
+    @Override
+    public int hashCode() {
+        return Objects.hash(real, imaginary);
     }
 }

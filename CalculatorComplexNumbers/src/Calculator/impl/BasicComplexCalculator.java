@@ -1,4 +1,4 @@
-// Calculator/impl/BasicComplexCalculator.java
+// BasicComplexCalculator.java
 package Calculator.impl;
 
 import Calculator.ComplexCalculator;
@@ -30,6 +30,13 @@ public class BasicComplexCalculator implements ComplexCalculator {
     }
 
     @Override
+    public ComplexNumber subtract(ComplexNumber a, ComplexNumber b) {
+        ComplexNumber result = new ComplexNumber(a.getReal() - b.getReal(), a.getImaginary() - b.getImaginary());
+        logOperation("Вычитание", a, b, result);
+        return result;
+    }
+
+    @Override
     public ComplexNumber multiply(ComplexNumber a, ComplexNumber b) {
         double realPart = a.getReal() * b.getReal() - a.getImaginary() * b.getImaginary();
         double imaginaryPart = a.getReal() * b.getImaginary() + a.getImaginary() * b.getReal();
@@ -50,11 +57,8 @@ public class BasicComplexCalculator implements ComplexCalculator {
         double realPart = (a.getReal() * b.getReal() + a.getImaginary() * b.getImaginary()) / divisor;
         double imaginaryPart = (a.getImaginary() * b.getReal() - a.getReal() * b.getImaginary()) / divisor;
 
-        ComplexNumber result = new ComplexNumber(realPart, imaginaryPart);
-        logOperation("Деление", a, b, result);
-        return result;
+        return new ComplexNumber(realPart, imaginaryPart);
     }
-
 
     // Приватный метод для логгирования операции и результата
     private void logOperation(String operation, ComplexNumber a, ComplexNumber b, ComplexNumber result) {
