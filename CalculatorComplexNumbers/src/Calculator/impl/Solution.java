@@ -65,15 +65,21 @@ public class Solution {
                     + "im = " + num1.getImaginary() + " - " + num2.getImaginary() + " = " + result.getImaginary() + ".");
         } else if (operation.equals("Умножение")) {
             System.out.println("Найдём произведение с использованием формулы: "
-                    + "re = " + num1.getReal() + " * " + num2.getReal() + " - " + num1.getImaginary() + " * " + num2.getImaginary() + " = " + result.getReal() + ", "
-                    + "im = " + num1.getReal() + " * " + num2.getImaginary() + " + " + num1.getImaginary() + " * " + num2.getReal() + " = " + result.getImaginary() + ".");
+                    + "re = " + num1.getReal() + " * " + num2.getReal() + " - " + num1.getImaginary() + " * "
+                    + num2.getImaginary() + " = " + result.getReal() + ", "
+                    + "im = " + num1.getReal() + " * " + num2.getImaginary() + " + " + num1.getImaginary() + " * "
+                    + num2.getReal() + " = " + result.getImaginary() + ".");
         } else if (operation.equals("Деление")) {
             System.out.println("Найдём частное с использованием формулы: "
-                    + "re = (" + num1.getReal() + " * " + num2.getReal() + " + " + num1.getImaginary() + " * " + num2.getImaginary() + ") / (" + num2.getReal() + "^2 + " + num2.getImaginary() + "^2) = " + result.getReal() + ", "
-                    + "im = (" + num1.getImaginary() + " * " + num2.getReal() + " - " + num1.getReal() + " * " + num2.getImaginary() + ") / (" + num2.getReal() + "^2 + " + num2.getImaginary() + "^2) = " + result.getImaginary() + ".");
+                    + "re = (" + num1.getReal() + " * " + num2.getReal() + " + " + num1.getImaginary() + " * "
+                    + num2.getImaginary() + ") / (" + num2.getReal() + "^2 + " + num2.getImaginary() + "^2) = "
+                    + result.getReal() + ", " + "im = (" + num1.getImaginary() + " * " + num2.getReal() + " - "
+                    + num1.getReal() + " * " + num2.getImaginary() + ") / (" + num2.getReal() + "^2 + "
+                    + num2.getImaginary() + "^2) = " + result.getImaginary() + ".");
         }
 
-        System.out.println("Запишем их рядом, добавив к мнимой части i: " + result.getReal() + " + " + result.getImaginary() + "i");
+        System.out.println("Запишем их рядом, добавив к мнимой части i: " + result.getReal() + " + "
+                + result.getImaginary() + "i");
 
         System.out.println("Полученное число и будет ответом: " + result);
         System.out.println();
