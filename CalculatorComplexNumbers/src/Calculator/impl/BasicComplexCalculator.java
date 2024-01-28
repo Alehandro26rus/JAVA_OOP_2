@@ -22,6 +22,13 @@ public class BasicComplexCalculator implements ComplexCalculator {
         this.logger = logger;
     }
 
+    /**
+     * Выполняет сложение двух комплексных чисел.
+     *
+     * @param a Первое комплексное число.
+     * @param b Второе комплексное число.
+     * @return Результат сложения.
+     */
     @Override
     public ComplexNumber add(ComplexNumber a, ComplexNumber b) {
         ComplexNumber result = new ComplexNumber(a.getReal() + b.getReal(), a.getImaginary() + b.getImaginary());
@@ -29,6 +36,13 @@ public class BasicComplexCalculator implements ComplexCalculator {
         return result;
     }
 
+    /**
+     * Выполняет вычитание двух комплексных чисел.
+     *
+     * @param a Уменьшаемое комплексное число.
+     * @param b Вычитаемое комплексное число.
+     * @return Результат вычитания.
+     */
     @Override
     public ComplexNumber subtract(ComplexNumber a, ComplexNumber b) {
         ComplexNumber result = new ComplexNumber(a.getReal() - b.getReal(), a.getImaginary() - b.getImaginary());
@@ -36,6 +50,13 @@ public class BasicComplexCalculator implements ComplexCalculator {
         return result;
     }
 
+    /**
+     * Выполняет умножение двух комплексных чисел.
+     *
+     * @param a Первое комплексное число.
+     * @param b Второе комплексное число.
+     * @return Результат умножения.
+     */
     @Override
     public ComplexNumber multiply(ComplexNumber a, ComplexNumber b) {
         double realPart = a.getReal() * b.getReal() - a.getImaginary() * b.getImaginary();
@@ -46,6 +67,14 @@ public class BasicComplexCalculator implements ComplexCalculator {
         return result;
     }
 
+    /**
+     * Выполняет деление двух комплексных чисел.
+     *
+     * @param a Делимое комплексное число.
+     * @param b Делитель комплексное число.
+     * @return Результат деления в виде Optional<ComplexNumber>.
+     * @throws CalculatorException если делитель равен нулю.
+     */
     @Override
     public ComplexNumber divide(ComplexNumber a, ComplexNumber b) throws CalculatorException {
         double divisor = b.getReal() * b.getReal() + b.getImaginary() * b.getImaginary();
@@ -57,7 +86,9 @@ public class BasicComplexCalculator implements ComplexCalculator {
         double realPart = (a.getReal() * b.getReal() + a.getImaginary() * b.getImaginary()) / divisor;
         double imaginaryPart = (a.getImaginary() * b.getReal() - a.getReal() * b.getImaginary()) / divisor;
 
-        return new ComplexNumber(realPart, imaginaryPart);
+        ComplexNumber result = new ComplexNumber(realPart, imaginaryPart);
+        logOperation("Деление", a, b, result);
+        return result;
     }
 
     // Приватный метод для логгирования операции и результата
