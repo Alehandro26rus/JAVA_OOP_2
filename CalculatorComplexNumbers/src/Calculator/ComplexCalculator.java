@@ -12,3 +12,4 @@ public interface ComplexCalculator {
     ComplexNumber multiply(ComplexNumber a, ComplexNumber b);
     ComplexNumber divide(ComplexNumber a, ComplexNumber b) throws CalculatorException;
 }
+
