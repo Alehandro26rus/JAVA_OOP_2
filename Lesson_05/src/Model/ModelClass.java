@@ -40,3 +40,4 @@ public class ModelClass implements iGetModel {
         students.removeIf(student -> student.getId() == studentId);
     }
 }
+

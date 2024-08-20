@@ -8,15 +8,17 @@ package Model.Domain;
  */
 public class Student extends Person implements Comparable<Student> {
     private int id;
-    static  int generalId;
+    static int generalId;
 
-    // Конструктор, который наследует от Person super(name, age), и присваивает идентификатор
+    // Конструктор, который наследует от Person super(name, age), и присваивает
+    // идентификатор
     // новому студенту. Так же инкриментирует поле общее число студентов
     public Student(String name, int age) {
         super(name, age);
         this.id = generalId;
-        generalId ++;
+        generalId++;
     }
+
     // Методы геттеры и сеттеры
     public int getId() {
         return id;
@@ -25,6 +27,7 @@ public class Student extends Person implements Comparable<Student> {
     public void setId(int id) {
         this.id = id;
     }
+
     // Переопределение метода toString
     @Override
     public String toString() {
@@ -33,6 +36,7 @@ public class Student extends Person implements Comparable<Student> {
                 .append(super.toString()).append("}");
         return studentString.toString();
     }
+
     // Переопределение метода сравнения и сортировки студентов
     @Override
     public int compareTo(Student o) {

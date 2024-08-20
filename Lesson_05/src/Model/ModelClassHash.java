@@ -8,13 +8,15 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Реализация интерфейса iGetModel с использованием HashMap для хранения студентов.
+ * Реализация интерфейса iGetModel с использованием HashMap для хранения
+ * студентов.
  */
 public class ModelClassHash implements iGetModel {
     private Map<Integer, Student> studentHashMap;
 
     /**
      * Конструктор класса ModelClassHash.
+     * 
      * @param studentHashMap HashMap для хранения студентов.
      */
     public ModelClassHash(Map<Integer, Student> studentHashMap) {
@@ -23,6 +25,7 @@ public class ModelClassHash implements iGetModel {
 
     /**
      * Добавляет студента в HashMap.
+     * 
      * @param id      Идентификатор студента.
      * @param student Объект студента.
      */
@@ -32,6 +35,7 @@ public class ModelClassHash implements iGetModel {
 
     /**
      * Получает список студентов из HashMap.
+     * 
      * @return Список студентов.
      */
     @Override
@@ -41,7 +45,9 @@ public class ModelClassHash implements iGetModel {
 
     /**
      * Получает HashMap студентов.
-     * @return HashMap, где ключ - идентификатор студента, значение - объект студента.
+     * 
+     * @return HashMap, где ключ - идентификатор студента, значение - объект
+     *         студента.
      */
     @Override
     public Map<Integer, Student> getStudentMap() {
@@ -50,6 +56,7 @@ public class ModelClassHash implements iGetModel {
 
     /**
      * Удаляет студента из HashMap по его идентификатору.
+     * 
      * @param studentId Идентификатор удаляемого студента.
      */
     @Override

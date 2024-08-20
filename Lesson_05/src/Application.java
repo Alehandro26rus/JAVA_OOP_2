@@ -68,7 +68,7 @@ public class Application {
 
         // Создаем объекты моделей и представлений
         iGetModel model1 = new ModelClass(list_01); // создаем модель из списка List
-        iGetModel model2 = new ModelClassHash(studentHashMap); // создаём модель  из HashMap
+        iGetModel model2 = new ModelClassHash(studentHashMap); // создаём модель из HashMap
 
         iGetView view = new ViewClass(); // создаём объект на русском
         iGetView enView = new ViewClassEng(); // создаём объект на английском

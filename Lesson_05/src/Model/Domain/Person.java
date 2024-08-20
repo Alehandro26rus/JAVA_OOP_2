@@ -17,7 +17,7 @@ public abstract class Person {
         this.age = age;
     }
 
-    //Методы геттеры и сеттеры
+    // Методы геттеры и сеттеры
 
     public String getName() {
         return name;
@@ -37,10 +37,10 @@ public abstract class Person {
 
     // Переопределение метода toString
     @Override
-    public String toString(){
+    public String toString() {
         StringBuilder personString = new StringBuilder();
         personString.append("\tname = ").append(this.name);
-        if (name.length() <= 4){
+        if (name.length() <= 4) {
             personString.append("\t");
         }
         personString.append("\t\t");
