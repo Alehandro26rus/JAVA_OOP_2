@@ -1,6 +1,6 @@
 package Domain;
 
-public class Bottle extends Product{
+public class Bottle extends Product {
 
     public float getBottleVolume() {
         return bottleVolume;
@@ -16,8 +16,9 @@ public class Bottle extends Product{
         super(price, place, name, id);
         this.bottleVolume = bottleVolume;
     }
+
     @Override
-    public String toString(){
-        return super.toString() + "Volume = "+bottleVolume+"\n";
+    public String toString() {
+        return super.toString() + "Volume = " + bottleVolume + "\n";
     }
 }

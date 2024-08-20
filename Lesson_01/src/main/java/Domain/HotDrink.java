@@ -1,7 +1,7 @@
 package Domain;
 
 // ДЗ создание класса горячие напитки
-public class HotDrink extends Product{
+public class HotDrink extends Product {
     private float drinkVolume;
     private int temperature;
 
@@ -10,10 +10,11 @@ public class HotDrink extends Product{
         this.drinkVolume = drinkVolume;
         this.temperature = temperature;
     }
+
     @Override
-    public String toString(){
-        return super.toString() + "Volume = " +drinkVolume+ "\n"+
-                                    "Temperature = " +temperature+ "\n";
+    public String toString() {
+        return super.toString() + "Volume = " + drinkVolume + "\n" +
+                "Temperature = " + temperature + "\n";
     }
 
     public float getDrinkVolume() {

@@ -1,20 +1,21 @@
 package Domain;
 
 public class Product {
-    //Поля
+    // Поля
     private int price;
     private int place;
     private String name;
     private long id;
 
-    //Конструктор
+    // Конструктор
     public Product(int price, int place, String name, long id) {
         this.price = price;
         this.place = place;
         this.name = name;
         this.id = id;
     }
-    //Методы
+
+    // Методы
     public int getPrice() {
         return price;
     }
@@ -22,9 +23,8 @@ public class Product {
     public void setPrice(int price) {
         if (price < 0) {
             this.price = 10;
-        }
-        else {
-        this.price = price;
+        } else {
+            this.price = price;
         }
     }
 
@@ -51,12 +51,13 @@ public class Product {
     public void setId(long id) {
         this.id = id;
     }
+
     // Переопределение вывода
     @Override
-    public String toString(){
-        return "\nPrice = "+ this.price+"\n"+
-                "Place = " + this.place+"\n"+
-                "Name = " + this.name+"\n"+
-                "ID = " + this.id+"\n";
+    public String toString() {
+        return "\nPrice = " + this.price + "\n" +
+                "Place = " + this.place + "\n" +
+                "Name = " + this.name + "\n" +
+                "ID = " + this.id + "\n";
     }
 }

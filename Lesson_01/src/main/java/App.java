@@ -19,7 +19,7 @@ public class App {
         Product item_5 = new Product(60, 5, "Cheese", 5);
         Product item_6 = new Product(150, 6, "Breakers", 6);
         Product item_7 = new Bottle(80, 7, "Cola", 7, 0.5f);
-        //Домашнее задание по добавлению напитков
+        // Домашнее задание по добавлению напитков
         Product item_8 = new HotDrink(110, 8, "Tea", 8, 0.2f, 75);
         Product item_9 = new HotDrink(130, 9, "Tea", 9, 0.3f, 75);
         Product item_10 = new HotDrink(180, 10, "Tea", 10, 0.5f, 75);
@@ -40,7 +40,7 @@ public class App {
         productList.add(item_6);
         productList.add(item_7);
 
-        //Добавляем вывод новых продуктов
+        // Добавляем вывод новых продуктов
         productList.add(item_8);
         productList.add(item_9);
         productList.add(item_10);
@@ -48,10 +48,9 @@ public class App {
         productList.add(item_12);
         productList.add(item_13);
 
-
         VendingMachine vm = new VendingMachine(hold, coin, display, productList);
 
-        for (Product p : vm.getAssort()){
+        for (Product p : vm.getAssort()) {
             System.out.println(p);
         }
 
