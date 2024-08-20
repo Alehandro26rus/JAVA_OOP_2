@@ -12,3 +12,4 @@ public class AdditionSolver extends OperationSolver {
         Solution.printAdditionSolution(num1, num2, result);
     }
 }
+
