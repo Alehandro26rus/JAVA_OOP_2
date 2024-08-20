@@ -19,3 +19,4 @@ public class ConsoleLogger implements Logger {
         System.out.println("Лог: " + message);
     }
 }
+
