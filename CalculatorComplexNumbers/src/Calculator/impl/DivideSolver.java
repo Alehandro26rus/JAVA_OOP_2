@@ -12,3 +12,4 @@ public class DivideSolver extends OperationSolver {
         Solution.printDivisionSolution(num1, num2, result);
     }
 }
+
