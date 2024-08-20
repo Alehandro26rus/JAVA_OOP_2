@@ -97,3 +97,4 @@ public class BasicComplexCalculator implements ComplexCalculator {
         logger.log(logMessage);
     }
 }
+
