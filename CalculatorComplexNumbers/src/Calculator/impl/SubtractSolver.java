@@ -12,3 +12,4 @@ public class SubtractSolver extends OperationSolver {
         Solution.printSubtractionSolution(num1, num2, result);
     }
 }
+
