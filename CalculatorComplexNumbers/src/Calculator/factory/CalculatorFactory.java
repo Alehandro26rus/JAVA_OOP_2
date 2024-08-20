@@ -22,3 +22,4 @@ public class CalculatorFactory {
 
     // Другие методы, если необходимо
 }
+
