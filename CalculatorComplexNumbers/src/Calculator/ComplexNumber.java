@@ -74,3 +74,4 @@ public class ComplexNumber {
         return Objects.hash(real, imaginary);
     }
 }
+
