@@ -1,7 +1,8 @@
 package DependencyInversionPrinciple;
 
 /**
- * Класс DieselEngine реализует интерфейс Engine и представляет дизельный двигатель.
+ * Класс DieselEngine реализует интерфейс Engine и представляет дизельный
+ * двигатель.
  */
 public class DieselEngine implements Engine {
     /**

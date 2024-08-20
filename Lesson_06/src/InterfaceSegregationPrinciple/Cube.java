@@ -34,3 +34,4 @@ public class Cube implements TwoDimensionalShape, ThreeDimensionalShape {
         return edge * edge * edge; // Формула для объема куба
     }
 }
+
