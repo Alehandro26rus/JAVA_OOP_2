@@ -15,3 +15,4 @@ public class CalculatorException extends Exception {
         super(message);
     }
 }
+
