@@ -9,22 +9,23 @@ public class VendingMachine {
     private Display display;
     private List<Product> assort;
 
-    //Конструктор
+    // Конструктор
     public VendingMachine(Holder hold, CoinDispenser coin, Display display, List<Product> assort) {
         this.hold = hold;
         this.coin = coin;
         this.display = display;
         this.assort = assort;
     }
-    //Методы
+    // Методы
 
-
-    public void buyProduct(){
-
-    }
-    public void releaseProduct(){
+    public void buyProduct() {
 
     }
+
+    public void releaseProduct() {
+
+    }
+
     public Holder getHold() {
         return hold;
     }
