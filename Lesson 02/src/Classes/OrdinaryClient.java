@@ -1,6 +1,7 @@
 package Classes;
 
 import Interfaces.iReturnOrder;
+
 // Класс обычного покупателя (клиента)
 public class OrdinaryClient extends Actor implements iReturnOrder {
 
@@ -13,6 +14,7 @@ public class OrdinaryClient extends Actor implements iReturnOrder {
 
     /**
      * Проверяет, совершает ли клиент заказ.
+     * 
      * @return true, если клиент совершает заказ, иначе false.
      */
     public boolean isTakeOrder() {
@@ -25,6 +27,7 @@ public class OrdinaryClient extends Actor implements iReturnOrder {
 
     /**
      * Устанавливает флаг совершением заказа клиентом.
+     * 
      * @param val true, если совершает заказ, false - в противном случае.
      */
     public void setTakeOrder(boolean val) {
@@ -39,6 +42,7 @@ public class OrdinaryClient extends Actor implements iReturnOrder {
 
     /**
      * Возвращает объект покупателя.
+     * 
      * @return Объект покупателя.
      */
     public Actor geActor() {
@@ -49,6 +53,7 @@ public class OrdinaryClient extends Actor implements iReturnOrder {
 
     /**
      * Получает имя покупателя.
+     * 
      * @return Имя покупателя.
      */
     public String getName() {
@@ -57,6 +62,7 @@ public class OrdinaryClient extends Actor implements iReturnOrder {
 
     /**
      * Устанавливает новое имя для покупателя.
+     * 
      * @param name Новое имя покупателя.
      */
     @Override
@@ -76,7 +82,8 @@ public class OrdinaryClient extends Actor implements iReturnOrder {
     }
 
     /**
-     * Реализация метода для получения информации о возвращенных товарах для обычного покупателя.
+     * Реализация метода для получения информации о возвращенных товарах для
+     * обычного покупателя.
      */
     @Override
     public void getReturnInfo() {

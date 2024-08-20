@@ -12,7 +12,8 @@ public class SpecialClient extends Actor implements iReturnOrder {
 
     /**
      * Конструктор для создания особого покупателя.
-     * @param name Имя клиента.
+     * 
+     * @param name  Имя клиента.
      * @param idVIP Идентификационный номер особого покупателя.
      */
     public SpecialClient(String name, int idVIP) {
@@ -67,7 +68,8 @@ public class SpecialClient extends Actor implements iReturnOrder {
     }
 
     /**
-     * Реализация метода для получения информации о возвращенных товарах для особого покупателя.
+     * Реализация метода для получения информации о возвращенных товарах для особого
+     * покупателя.
      */
     @Override
     public void getReturnInfo() {

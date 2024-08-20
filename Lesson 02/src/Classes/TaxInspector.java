@@ -11,8 +11,7 @@ public class TaxInspector implements iActorBehaviour {
         this.name = "Tax audit";
     }
 
-    public String getName()
-    {
+    public String getName() {
         return name;
     }
 
@@ -28,7 +27,7 @@ public class TaxInspector implements iActorBehaviour {
 
     @Override
     public void setTakeOrder(boolean val) {
-       this.isTakeOrder = val;
+        this.isTakeOrder = val;
     }
 
     @Override
@@ -40,7 +39,5 @@ public class TaxInspector implements iActorBehaviour {
     public Actor geActor() {
         return new OrdinaryClient(name);
     }
-
-
 
 }

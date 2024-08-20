@@ -20,6 +20,7 @@ public abstract class Actor implements iActorBehaviour {
 
     /**
      * Конструктор для создания покупателя.
+     * 
      * @param name Имя покупателя.
      */
     public Actor(String name) {
@@ -28,14 +29,15 @@ public abstract class Actor implements iActorBehaviour {
 
     /**
      * Абстрактный метод для получения имени покупателя.
+     * 
      * @return Имя покупателя.
      */
     public abstract String getName();
 
     /**
      * Абстрактный метод для установки имени покупателя.
+     * 
      * @param name Новое имя покупателя.
      */
     public abstract void setName(String name);
 }
-

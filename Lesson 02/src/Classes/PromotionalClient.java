@@ -13,20 +13,23 @@ public class PromotionalClient extends OrdinaryClient {
 
     /**
      * Конструктор для создания акционного покупателя.
-     * @param name Имя покупателя.
+     * 
+     * @param name      Имя покупателя.
      * @param stockName Название акции.
-     * @param clientId ID покупателя.
+     * @param clientId  ID покупателя.
      */
     public PromotionalClient(String name, String stockName, int clientId) {
         super(name);
         this.stockName = stockName;
         this.clientId = clientId;
-        // Увеличиваем общее количество участников в акции при создании нового акционного покупателя.
+        // Увеличиваем общее количество участников в акции при создании нового
+        // акционного покупателя.
         numberOfParticipants++;
     }
 
     /**
      * Получить название акции.
+     * 
      * @return Название акции.
      */
     public String getStockName() {
@@ -35,6 +38,7 @@ public class PromotionalClient extends OrdinaryClient {
 
     /**
      * Установить название акции.
+     * 
      * @param stockName Название акции.
      */
     public void setStockName(String stockName) {
@@ -43,12 +47,12 @@ public class PromotionalClient extends OrdinaryClient {
 
     /**
      * Получить ID покупателя.
+     * 
      * @return ID покупателя.
      */
     public int getClientId() {
         return clientId;
     }
-
 
     public void setClientId(int clientId) {
         this.clientId = clientId;
