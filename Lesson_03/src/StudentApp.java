@@ -1,3 +1,4 @@
+
 import domain.GroupeIterator;
 import domain.Student;
 import domain.StudentGroup;
@@ -13,7 +14,7 @@ import java.util.List;
  */
 public class StudentApp {
     public static void main(String[] args) {
-        //Создадим студентов
+        // Создадим студентов
 
         Student student_01 = new Student("Петя", 23);
         Student student_02 = new Student("Даня", 28);
@@ -36,7 +37,7 @@ public class StudentApp {
         Student student_17 = new Student("Даниил", 18);
         Student student_18 = new Student("Глеб", 23);
 
-        //Создадим новый список студентов
+        // Создадим новый список студентов
         List<Student> list_01 = new ArrayList<>();
 
         list_01.add(student_01);
@@ -53,7 +54,8 @@ public class StudentApp {
         list_02.add(student_09);
         list_02.add(student_10);
         list_02.add(student_11);
-        //list_02.add(student_12); // убираем элемент для проверки сортировки по числу студентов в группе
+        // list_02.add(student_12); // убираем элемент для проверки сортировки по числу
+        // студентов в группе
 
         List<Student> list_03 = new ArrayList<>();
 
@@ -64,7 +66,8 @@ public class StudentApp {
         list_03.add(student_17);
         list_03.add(student_18);
 
-        // Создаём группу студентов, в которую передаём список студентов и идентификатор группы
+        // Создаём группу студентов, в которую передаём список студентов и идентификатор
+        // группы
         StudentGroup group_1 = new StudentGroup(list_01, 1);
         StudentGroup group_2 = new StudentGroup(list_02, 2);
         StudentGroup group_3 = new StudentGroup(list_03, 3);
