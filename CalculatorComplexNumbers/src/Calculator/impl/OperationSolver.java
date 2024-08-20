@@ -12,3 +12,4 @@ public abstract class OperationSolver {
      */
     public abstract void printSolution(ComplexNumber num1, ComplexNumber num2, ComplexNumber result);
 }
+
