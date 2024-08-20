@@ -12,3 +12,4 @@ public class MultiplySolver extends OperationSolver {
         Solution.printMultiplicationSolution(num1, num2, result);
     }
 }
+
