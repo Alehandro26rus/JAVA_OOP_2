@@ -1,4 +1,5 @@
 package services;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -9,7 +10,7 @@ public class StudentsService implements iPersonService<Student> {
     private int count;
     private List<Student> students;
 
-    public StudentsService(){
+    public StudentsService() {
         students = new ArrayList<>();
     }
 
@@ -25,7 +26,8 @@ public class StudentsService implements iPersonService<Student> {
         students.add(stud);
         sortByFIO();
     }
-    public void sortByFIO(){
+
+    public void sortByFIO() {
         PersonComparator<Student> studComp = new PersonComparator<>();
         students.sort(studComp);
     }

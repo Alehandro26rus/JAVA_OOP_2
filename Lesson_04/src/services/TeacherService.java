@@ -1,4 +1,5 @@
 package services;
+
 /**
  * Класс TeacherService обслуживающий учителей
  */
@@ -20,8 +21,9 @@ public class TeacherService implements iPersonService<Teacher> {
     public TeacherService() {
         teachers = new ArrayList<>();
     }
+
     // Метод сортировки учителей
-    public void sortByFIO(){
+    public void sortByFIO() {
         PersonComparator<Teacher> teachCom = new PersonComparator<>();
         teachers.sort(teachCom);
     }
@@ -32,9 +34,10 @@ public class TeacherService implements iPersonService<Teacher> {
     }
 
     /**
-     *Метод создания нового учителя
+     * Метод создания нового учителя
+     * 
      * @param name - имя учителя
-     * @param age - возраст учителя
+     * @param age  - возраст учителя
      */
 
     @Override

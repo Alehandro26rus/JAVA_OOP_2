@@ -1,10 +1,12 @@
+
 package domain;
 
 import java.util.Iterator;
 import java.util.List;
 
 /**
- * Класс StudentGroup объединяет список студентов в одну группу со своим идентификатором
+ * Класс StudentGroup объединяет список студентов в одну группу со своим
+ * идентификатором
  * List<Student> list - список студентов группы
  * int id - идентификатор группы
  * Класс использует стандартный интерфейс Java - Iterable
@@ -19,6 +21,7 @@ public class StudentGroup implements Iterable<Student>, Comparable<StudentGroup>
         this.list = list;
         this.id = id;
     }
+
     // Методы геттеры и сеттеры
     public List<Student> getList() {
         return list;
@@ -48,6 +51,7 @@ public class StudentGroup implements Iterable<Student>, Comparable<StudentGroup>
     public Iterator<Student> iterator() {
         return new StudentIterator(list);
     }
+
     @Override
     public int compareTo(StudentGroup otherGroup) {
         // Сравниваем группы по количеству студентов

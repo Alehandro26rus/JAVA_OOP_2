@@ -1,15 +1,16 @@
 package services;
+
 import java.util.ArrayList;
 import java.util.List;
 
 import domain.Employer;
 import domain.PersonComparator;
 
-
 public class EmployerService implements iPersonService<Employer> {
     private int count;
     private List<Employer> employer;
-    public EmployerService(){
+
+    public EmployerService() {
         employer = new ArrayList<>();
     }
 
@@ -25,7 +26,8 @@ public class EmployerService implements iPersonService<Employer> {
         employer.add(emp);
         sortByFIO();
     }
-    public void sortByFIO(){
+
+    public void sortByFIO() {
         PersonComparator<Employer> emCom = new PersonComparator<>();
         employer.sort(emCom);
     }

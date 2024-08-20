@@ -1,3 +1,4 @@
+
 package domain;
 
 import domain.GroupeIterator;
@@ -41,6 +42,7 @@ public class StudentSteam implements Iterable<StudentGroup> {
     public void setListGroup(List<StudentGroup> listGroup) {
         this.listGroup = listGroup;
     }
+
     // Добавляем метод для сортировки групп в потоке по количеству студентов
     public void sortGroupsByNumberOfStudents() {
         Collections.sort(listGroup, new Comparator<StudentGroup>() {
